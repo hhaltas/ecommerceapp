@@ -1,8 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import axios from "axios";
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/products").then((response) => {
+      setProducts(response.data);
+      console.log("test", response.data);
+    });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
