@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  flex: 1 1 20%;
+  max-width: 250px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product-section {
+  flex: 1 1 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.product-grid {
+  flex-grow: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .sidebar {
+    display: none; /* Mobilde kategori filtresini gizleyebiliriz */
   }
-  to {
-    transform: rotate(360deg);
+
+  .product-section {
+    flex: 1 1 100%;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center; /* YÃ¼kseklik boyunca ortalamak iÃ§in */
+  justify-content: space-between; /* Logo ve baÅŸlÄ±ÄŸÄ± uÃ§lara hizalamak iÃ§in */
+  padding: 10px 20px; /* Ãœst ve alt padding ile boÅŸluk bÄ±rakma */
+  background-color: #f8f8f8; /* Hafif gri arka plan */
+  border-bottom: 1px solid #ddd; /* AltÄ±nda ince bir Ã§izgi */
+}
+
+/* Logo stili */
+.logo {
+  max-height: 50px; /* Logo yÃ¼ksekliÄŸini sÄ±nÄ±rlama */
+  height: auto; /* OrantÄ±lÄ± yÃ¼kseklik */
+}
+
+/* BaÅŸlÄ±k stili */
+.header h1 {
+  font-size: 1.5em; /* BaÅŸlÄ±k boyutunu ayarlama */
+  margin: 0; /* VarsayÄ±lan margin'i kaldÄ±rma */
+  color: #333; /* BaÅŸlÄ±k rengi */
+}
+
+/* DuyarlÄ± tasarÄ±m iÃ§in medya sorgusu */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Mobilde dikey hizalama */
+    align-items: center; /* Merkezi hizalama */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Logo ve baÅŸlÄ±k arasÄ±na boÅŸluk ekleme */
+  }
+
+  .header h1 {
+    font-size: 1.2em; /* BaÅŸlÄ±k boyutunu kÃ¼Ã§Ã¼ltme */
+    align-items: center;
   }
 }

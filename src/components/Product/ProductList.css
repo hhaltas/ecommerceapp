@@ -3,14 +3,14 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
-  padding: 20px; /* Ürünler etrafında boşluk bırakma */
+  padding: 15px; /* Ürünler etrafında boşluk bırakma */
   box-sizing: border-box; /* Padding ve border'ı toplam genişlik ve yüksekliğe dahil etme */
 }
 
 /* Ürün kartı stili */
 .product-card {
   background-color: #fff;
-  padding: 20px;
+  padding: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
@@ -26,6 +26,7 @@
   height: auto;
   border-bottom: 1px solid #eee; /* Ürün resmi ile diğer içerikler arasında ince bir çizgi */
   margin-bottom: 5px; /* Resim ve başlık/price arasına boşluk ekleme */
+  resize: inherit;
 }
 
 /* Ürün başlığı */
@@ -38,7 +39,9 @@
 .product-card p {
   font-size: 0.9em;
   color: #555;
-  margin: 0;
+  margin-bottom: 25px;
+  font-style: normal;
+  text-align: start;
 }
 
 /* Ürün fiyatı ve butonu için kapsayıcı */
@@ -46,10 +49,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  bottom: -10px; /* Kartın altından 20px yukarıda yer alacak şekilde */
+  width: 90%;
+  position: absolute;
+  bottom: 10px; /* Kartın altından 20px yukarıda yer alacak şekilde */
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 30px;
 }
 
 /* Ürün fiyatı */
