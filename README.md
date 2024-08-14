@@ -15,28 +15,28 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 
-{
-  "scripts": {
-    "json-server": "npx json-server --watch db.json --port 3001", // json-server'ı belirli bir portta çalıştırır
-    "start": "concurrently \"yarn json-server\" \"react-scripts start\"" // aynı anda json-server ve React uygulamasını başlatır
-  },
-  "dependencies": {
-    "concurrently": "^7.0.0" // concurrently modülünü eklemeyi unutmayın
-  }
-}
+{\
+  "scripts": {\
+    "json-server": "npx json-server --watch db.json --port 3001", \
+    "start": "concurrently \"yarn json-server\" \"react-scripts start\"" \
+  },\
+  "dependencies": {\
+    "concurrently": "^7.0.0" \
+  }\
+}\
 
--- json-server:
+-- json-server:\
 
-This script starts a local JSON server using npx.
-The server watches the db.json file located in the ./src/constant/ directory, meaning any changes to this file will automatically update the server.
-The server will run on port 3001.
+This script starts a local JSON server using npx.\
+The server watches the db.json file located in the ./src/constant/ directory, meaning any changes to this file will automatically update the server.\
+The server will run on port 3001.\
 
--- start:
+-- start:\
 
-This script uses concurrently to run multiple commands at the same time.
-It first starts the json-server you defined above and then starts your React development server using react-scripts start.
-This allows you to run both the mock backend (JSON server) and your React app simultaneously with a single command.
-This setup is useful for development environments where you need a mock API server and a frontend server running together.
+This script uses concurrently to run multiple commands at the same time.\
+It first starts the json-server you defined above and then starts your React development server using react-scripts start.\
+This allows you to run both the mock backend (JSON server) and your React app simultaneously with a single command.\
+This setup is useful for development environments where you need a mock API server and a frontend server running together.\
 
 ### `npm test`
 
